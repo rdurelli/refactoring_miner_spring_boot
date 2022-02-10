@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RefactoringRepository extends JpaRepository<RefactoringModel, Integer> {
 
+    Long countAllByRefactoringType(String refactoringType);
+    Long countAllByTagSourceAndTagTarget(String tagSource, String tagTarget);
 }

@@ -13,4 +13,12 @@ public class RefactoringService {
     public RefactoringModel save(RefactoringModel refactoringModel) {
         return this.refactoringRepository.save(refactoringModel);
     }
+
+    public Long countAllByRefactoringType(String refactoringType) {
+        return refactoringRepository.countAllByRefactoringType(refactoringType);
+    }
+
+    public Long countAllByTagSourceAndTagTarget(String tagSource, String tagTarget) {
+        return refactoringRepository.countAllByTagSourceAndTagTarget(tagSource, tagTarget);
+    }
 }
